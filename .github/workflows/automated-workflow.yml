@@ -1,0 +1,33 @@
+# This is a basic workflow that is automatically triggered based on some events
+
+name: Automated workflow
+
+on:
+  push:
+    branches: [ master ]
+
+  schedule:
+    #This will run a scheduled job at 6 am UTC and 11 am UTC everyday
+    - cron:  '0 6,11 * * *'
+
+jobs:
+  run-demo-test:
+    runs-on: [self-hosted,X64,Linux]
+    steps:
+    
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      
+      - name: checkout test repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: run demo test using actions
+        run: |
+          chmod 777 install-requirements.sh
+          sudo bash install-requirements.sh
+          DEBIAN_FRONTEND=noninteractive
+          bash testConfig.sh ${{ secrets.SLACK_TOKEN }}
