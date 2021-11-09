@@ -16,7 +16,7 @@ def send_report_to_slack(filePath,fileName):
 
     data = {
         "token": token_var,
-        "channels": "",
+        "channels": "#practice",
         "content": read_data,
         "filename": fileName,
         "title": "Demo test Actions slack test result: "+fileName,
