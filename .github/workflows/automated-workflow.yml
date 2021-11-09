@@ -4,7 +4,7 @@ name: Automated workflow
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
   schedule:
     #This will run a scheduled job at 6 am UTC and 11 am UTC everyday
