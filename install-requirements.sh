@@ -22,5 +22,5 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
 apt-get update && apt-get -y install google-chrome-stable_92.0.4515.131
 #Install protractor
 npm install -g protractor
-webdriver-manager update --versions.chrome 92.0.4515.131
+webdriver-manager update --versions.chrome 95.0.4638.69
 npm install
