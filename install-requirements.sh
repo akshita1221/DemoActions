@@ -23,3 +23,4 @@ apt-get update && apt-get -y install google-chrome-stable_92.0.4515.131
 #Install protractor
 npm install -g protractor
 webdriver-manager update --versions.chrome 92.0.4515.131
+npm install
