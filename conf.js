@@ -6,7 +6,7 @@ exports.config={
         browserName: 'chrome',
       
         'chromeOptions': {
-           args: [ "user-agent=Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/535.19", "--headless", "--disable-gpu" ]
+           args: [ "user-agent=Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/95.0.4638.69 Mobile Safari/535.19", "--headless", "--disable-gpu" ]
          }
       },
   onPrepare: function() {
