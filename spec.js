@@ -1,6 +1,6 @@
 const { browser, element } = require("protractor");
 const { protractor } = require("protractor/built/ptor");
-
+//test passed
 describe('login feature', function()
 {
     it('should launch the given url successfully', function(){
