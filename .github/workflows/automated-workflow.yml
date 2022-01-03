@@ -6,7 +6,7 @@ on:
 
   schedule:
     #This will run a scheduled job at 4.30 am UTC everyday
-    - cron:  '0 12 * * *'
+    - cron:  '30 11,12 * * *'
 
 jobs:
   run-demo-test:
