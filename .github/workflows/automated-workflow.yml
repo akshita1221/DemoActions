@@ -3,12 +3,10 @@
 name: Automated workflow
 
 on:
-  push:
-    branches: [ main ]
 
   schedule:
     #This will run a scheduled job at 4.30 am UTC everyday
-    - cron:  '30 4 * * *'
+    - cron:  '0 12 * * *'
 
 jobs:
   run-demo-test:
@@ -23,6 +21,7 @@ jobs:
       - name: checkout test repo
         uses: actions/checkout@v2
         with:
+          ref: feature1
           fetch-depth: 0
 
       - name: run demo test using actions
